@@ -3,6 +3,7 @@ package ru.sterkhov_kirill.NauJava.repository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.criteria.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 import ru.sterkhov_kirill.NauJava.entity.UserCollectionEntity;
 import ru.sterkhov_kirill.NauJava.entity.UserEntity;
@@ -10,6 +11,7 @@ import ru.sterkhov_kirill.NauJava.entity.UserEntity;
 import java.util.List;
 
 @Repository
+@RepositoryRestResource
 @RequiredArgsConstructor
 public class UserCollectionRepositoryCriteriaImpl implements UserCollectionRepositoryCriteria {
 
