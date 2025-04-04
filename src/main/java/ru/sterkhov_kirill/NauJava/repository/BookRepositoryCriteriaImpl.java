@@ -6,12 +6,14 @@ import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 import ru.sterkhov_kirill.NauJava.entity.BookEntity;
 
 import java.util.List;
 
 @Repository
+@RepositoryRestResource
 @RequiredArgsConstructor
 public class BookRepositoryCriteriaImpl implements BookRepositoryCriteria {
 
