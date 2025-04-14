@@ -1,10 +1,10 @@
-package ru.sterkhov_kirill.NauJava;
+package ru.sterkhov_kirill.NauJava.config;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class Config {
+public class AppConfig {
 
     private static final String APP_NAME = "NauJava";
     private static final String APP_VERSION = "1.0.0";
