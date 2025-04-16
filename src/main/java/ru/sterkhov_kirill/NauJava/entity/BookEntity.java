@@ -38,7 +38,7 @@ public class BookEntity {
     private int availableCopies = 1;
 
     @Column(name = "is_available_for_online")
-    private boolean isAvailableForOnline;
+    private boolean isAvailableForOnline = Boolean.FALSE;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;

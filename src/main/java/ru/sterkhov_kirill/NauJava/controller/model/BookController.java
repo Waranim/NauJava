@@ -1,4 +1,4 @@
-package ru.sterkhov_kirill.NauJava.controller;
+package ru.sterkhov_kirill.NauJava.controller.model;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
