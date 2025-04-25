@@ -15,14 +15,14 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
 
     public void createUser(UserRegister user) {
-        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
-            throw new UsernameExists(user.getUsername());
+        if (userRepository.findByUsername(user.username()).isPresent()) {
+            throw new UsernameExists(user.username());
         }
 
         UserEntity userEntity = new UserEntity();
-        userEntity.setUsername(user.getUsername());
-        userEntity.setPasswordHash(passwordEncoder.encode(user.getPassword()));
-        userEntity.setEmail(user.getEmail());
+        userEntity.setUsername(user.username());
+        userEntity.setPasswordHash(passwordEncoder.encode(user.password()));
+        userEntity.setEmail(user.email());
 
         userRepository.save(userEntity);
     }
