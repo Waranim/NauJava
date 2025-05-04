@@ -12,7 +12,7 @@ public class BookController {
 
     private final BookRepository bookRepository;
 
-    @GetMapping("/books")
+    @GetMapping("/")
     public String getBooks(Model model) {
         model.addAttribute("books", bookRepository.findAll());
         return "books";
