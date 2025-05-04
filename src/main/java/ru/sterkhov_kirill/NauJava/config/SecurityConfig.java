@@ -29,11 +29,15 @@ public class SecurityConfig {
                                 ).hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
-                .formLogin(form -> form.loginPage("/login"))
-                .logout(logout ->
-                        logout
-                                .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
-                                .logoutSuccessUrl("/login?logout")
+                .formLogin(form -> form
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/")
+                        .permitAll()
+                )
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/login?logout")
+                        .permitAll()
                 );
 
         return http.build();

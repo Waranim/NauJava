@@ -17,5 +17,8 @@
         <td th:text="${book.genre}"></td>
     </tr>
 </table>
+<form th:action="@{/logout}" method="post" style="display: inline;">
+    <button type="submit" class="logout-btn">Выйти</button>
+</form>
 </body>
 </html>

@@ -53,7 +53,7 @@ public class ExControllerAdvice {
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ExceptionResponse exception(Exception e)
     {
         return new ExceptionResponse(
